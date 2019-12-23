@@ -8,7 +8,7 @@ cap = cv2.VideoCapture(0) # live stream with camera
 while 1:
     ret, img = cap.read()
     gray = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 2, 5)
+    faces = face_cascade.detectMultiScale(gray)
     
     for (x,y,w,h) in faces: 
         cv2.rectangle(img, (x,y) , (x+w, y+h),(255,0,0),2)
